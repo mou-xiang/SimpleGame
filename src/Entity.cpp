@@ -1,0 +1,30 @@
+#include "Entity.hpp"
+
+void Entity::render(SDL_Renderer* renderer){
+  SDL_Rect rect = { (int)x - w/2, (int)y - h/2, w, h };
+  SDL_RenderCopy(renderer, texture, nullptr, &rect);
+}
+
+void Player::handleInput(SDL_Event& event){
+  if (event.type == SDL_KEYDOWN) {
+    if (event.key.keysym.sym == SDLK_LEFT && currentLine > 0) currentLine--;
+    if (event.key.keysym.sym == SDLK_RIGHT && currentLine < 2)  currentLine++;
+    //! 计算目标位置
+    targetX = 400.0f + currentLine * 200.0f;
+  }
+}
+
+void Player::update(float dt){
+  x += (targetX - x) * moveSpeed * dt;
+}
+
+Player::Player(int setX, int setY, int setW, int setH, SDL_Texture* setTexture){
+  // x = setX - static_cast<float>(w) / 2;
+  // y = setY - static_cast<float>(h) / 2;
+  x = setX;
+  y = setY;
+  w = setW;
+  h = setH;
+  texture = setTexture;
+  SDL_Log("Player created");
+}

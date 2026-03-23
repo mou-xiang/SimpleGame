@@ -1,0 +1,3 @@
+D:/uni/C_Project/SimpleGame/build/CMakeFiles/SimpleGame.dir
+D:/uni/C_Project/SimpleGame/build/CMakeFiles/edit_cache.dir
+D:/uni/C_Project/SimpleGame/build/CMakeFiles/rebuild_cache.dir
