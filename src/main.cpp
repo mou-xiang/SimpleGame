@@ -9,6 +9,9 @@
 constexpr int windowWidth = 1200;
 constexpr int windowHeight = 900;
 
+constexpr int windowCenterX = windowWidth / 2;
+constexpr int windowCenterY = windowHeight / 2;
+
 int main(int argc, char *argv[]) {
   //! 初始化SDL
   if (SDL_Init(SDL_INIT_VIDEO) < 0) {
@@ -60,11 +63,17 @@ int main(int argc, char *argv[]) {
 
     //! 更新玩家状态
     mainPlayer.update(DeltaTime);
-    
+    //! 清除上一帧画面
     SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
     SDL_RenderClear(renderer);
     //! 渲染玩家
     mainPlayer.render(renderer);
+    //! 绘制地面
+    SDL_SetRenderDrawColor(renderer, 0, 0, 255, 255);
+    SDL_RenderDrawLine(renderer, windowCenterX, windowCenterY - 200, 0, windowHeight);
+    SDL_RenderDrawLine(renderer, windowCenterX, windowCenterY - 200, windowWidth / 3, windowHeight);
+    SDL_RenderDrawLine(renderer, windowCenterX, windowCenterY - 200, windowWidth / 3 * 2, windowHeight);
+    SDL_RenderDrawLine(renderer, windowCenterX, windowCenterY - 200, windowWidth, windowHeight);
 
 
     SDL_RenderPresent(renderer);

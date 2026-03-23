@@ -10,8 +10,11 @@ set(SDL2_PATH "C:/deps/SDL2")
 include_directories("${SDL2_PATH}/include")
 link_directories("${SDL2_PATH}/lib/x64")
 
+# 设置源码目录
+file(GLOB_RECURSE SOURCES "src/*.cpp")
+
 include_directories("include")
-add_executable(${PROJECT_NAME} src/main.cpp src/Entity.cpp src/BackGround.cpp)
+add_executable(${PROJECT_NAME} ${SOURCES})
 
 
 

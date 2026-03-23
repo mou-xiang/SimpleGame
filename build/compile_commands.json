@@ -1,9 +1,9 @@
 [
 {
   "directory": "D:/uni/C_Project/SimpleGame/build",
-  "command": "D:\\llvm-mingw-ucrt-x86_64\\bin\\clang++.exe -IC:/deps/SDL2/include -ID:/uni/C_Project/SimpleGame/include -g -o CMakeFiles\\SimpleGame.dir\\src\\main.cpp.obj -c D:\\uni\\C_Project\\SimpleGame\\src\\main.cpp",
-  "file": "D:/uni/C_Project/SimpleGame/src/main.cpp",
-  "output": "D:/uni/C_Project/SimpleGame/build/CMakeFiles/SimpleGame.dir/src/main.cpp.obj"
+  "command": "D:\\llvm-mingw-ucrt-x86_64\\bin\\clang++.exe -IC:/deps/SDL2/include -ID:/uni/C_Project/SimpleGame/include -g -o CMakeFiles\\SimpleGame.dir\\src\\BackGround.cpp.obj -c D:\\uni\\C_Project\\SimpleGame\\src\\BackGround.cpp",
+  "file": "D:/uni/C_Project/SimpleGame/src/BackGround.cpp",
+  "output": "D:/uni/C_Project/SimpleGame/build/CMakeFiles/SimpleGame.dir/src/BackGround.cpp.obj"
 },
 {
   "directory": "D:/uni/C_Project/SimpleGame/build",
@@ -13,8 +13,8 @@
 },
 {
   "directory": "D:/uni/C_Project/SimpleGame/build",
-  "command": "D:\\llvm-mingw-ucrt-x86_64\\bin\\clang++.exe -IC:/deps/SDL2/include -ID:/uni/C_Project/SimpleGame/include -g -o CMakeFiles\\SimpleGame.dir\\src\\BackGround.cpp.obj -c D:\\uni\\C_Project\\SimpleGame\\src\\BackGround.cpp",
-  "file": "D:/uni/C_Project/SimpleGame/src/BackGround.cpp",
-  "output": "D:/uni/C_Project/SimpleGame/build/CMakeFiles/SimpleGame.dir/src/BackGround.cpp.obj"
+  "command": "D:\\llvm-mingw-ucrt-x86_64\\bin\\clang++.exe -IC:/deps/SDL2/include -ID:/uni/C_Project/SimpleGame/include -g -o CMakeFiles\\SimpleGame.dir\\src\\main.cpp.obj -c D:\\uni\\C_Project\\SimpleGame\\src\\main.cpp",
+  "file": "D:/uni/C_Project/SimpleGame/src/main.cpp",
+  "output": "D:/uni/C_Project/SimpleGame/build/CMakeFiles/SimpleGame.dir/src/main.cpp.obj"
 }
 ]
