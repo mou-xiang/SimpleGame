@@ -1,10 +1,13 @@
 // #include "BackGround.hpp"
 #include "Entity.hpp"
+#include <SDL_image.h>
 #include <iostream>
 #include <stdio.h>
 
-
 // Uint32 getDeltaTime();
+SDL_Texture *loadTexture(const std::string &, SDL_Renderer *);
+//! 定义初始化函数
+void g_Init();
 
 constexpr int windowWidth = 1200;
 constexpr int windowHeight = 900;
@@ -18,6 +21,11 @@ int main(int argc, char *argv[]) {
     printf("SDL could not initialize! SDL_Error: %s\n", SDL_GetError());
     return 1;
   }
+  //! 初始化IMG
+  if (!IMG_Init(IMG_INIT_JPG | IMG_INIT_PNG)) {
+    SDL_Log("SDL_image初始化失败");
+    exit(1);
+  }
   //! 创建窗口
   SDL_Window *window = SDL_CreateWindow("SimpleGame", SDL_WINDOWPOS_CENTERED,
                                         SDL_WINDOWPOS_CENTERED, windowWidth,
@@ -26,18 +34,19 @@ int main(int argc, char *argv[]) {
     printf("Window could not be created! SDL_Error: %s\n", SDL_GetError());
     return 1;
   }
-
   //! 创建渲染器
-  SDL_Renderer *renderer = SDL_CreateRenderer(window, -1, 0);
-  SDL_Renderer *BG_Renderer = SDL_CreateRenderer(window, -1, 0);
+  SDL_Renderer *renderer =
+      SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+  //! 创建并初始化游戏角色
+  // SDL_Surface *temp = SDL_LoadBMP("../img.bmp");
+  // SDL_Texture *texture = SDL_CreateTextureFromSurface(renderer, temp);
+  Player mainPlayer{windowWidth / 2, windowHeight / 3 * 2, 100, 100,
+                    loadTexture("../img.jpg", renderer)};
+  // SDL_FreeSurface(temp);
+
   //! 游戏结束条件
   bool isquit = false;
   SDL_Event event;
-  //! 创建并初始化游戏角色
-  SDL_Surface *temp = SDL_LoadBMP("../img.bmp");
-  SDL_Texture *texture = SDL_CreateTextureFromSurface(renderer, temp);
-  Player mainPlayer{windowWidth / 2, windowHeight / 3 * 2, 100, 100, texture};
-  SDL_FreeSurface(temp);
   //! 时间步长控制
   Uint32 lastTick = SDL_GetTicks();
   float DeltaTime = 0.0f;
@@ -70,22 +79,34 @@ int main(int argc, char *argv[]) {
     mainPlayer.render(renderer);
     //! 绘制地面
     SDL_SetRenderDrawColor(renderer, 0, 0, 255, 255);
-    SDL_RenderDrawLine(renderer, windowCenterX, windowCenterY - 200, 0, windowHeight);
-    SDL_RenderDrawLine(renderer, windowCenterX, windowCenterY - 200, windowWidth / 3, windowHeight);
-    SDL_RenderDrawLine(renderer, windowCenterX, windowCenterY - 200, windowWidth / 3 * 2, windowHeight);
-    SDL_RenderDrawLine(renderer, windowCenterX, windowCenterY - 200, windowWidth, windowHeight);
-
+    SDL_RenderDrawLine(renderer, windowCenterX, windowCenterY - 200, 0,
+                       windowHeight);
+    SDL_RenderDrawLine(renderer, windowCenterX, windowCenterY - 200,
+                       windowWidth / 3, windowHeight);
+    SDL_RenderDrawLine(renderer, windowCenterX, windowCenterY - 200,
+                       windowWidth / 3 * 2, windowHeight);
+    SDL_RenderDrawLine(renderer, windowCenterX, windowCenterY - 200,
+                       windowWidth, windowHeight);
 
     SDL_RenderPresent(renderer);
   }
 
   //! 释放window和renderer
   // SDL_Delay(3000); // 显示3秒
-  SDL_DestroyTexture(texture);
+  // SDL_DestroyTexture(texture);
   SDL_DestroyRenderer(renderer);
   SDL_DestroyWindow(window);
+  IMG_Quit();
   SDL_Quit();
   SDL_Log("内存已释放");
 
   return 0;
+}
+//! 直接调用SDL_image库加载纹理
+SDL_Texture *loadTexture(const std::string &path, SDL_Renderer *renderer) {
+  //! 使用IMG_LoadTexture加载图片
+  SDL_Texture *newTexture = IMG_LoadTexture(renderer, path.c_str());
+  if (newTexture == nullptr)
+    SDL_Log("图片加载失败");
+  return newTexture;
 }

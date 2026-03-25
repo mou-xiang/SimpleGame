@@ -53,7 +53,7 @@ build CMakeFiles/SimpleGame.dir/src/BackGround.cpp.obj: CXX_COMPILER__SimpleGame
   CONFIG = Debug
   DEP_FILE = CMakeFiles\SimpleGame.dir\src\BackGround.cpp.obj.d
   FLAGS = -g
-  INCLUDES = -IC:/deps/SDL2/include -ID:/uni/C_Project/SimpleGame/include
+  INCLUDES = -IC:/deps/SDL2/include -IC:/deps/SDL2_image/include -ID:/uni/C_Project/SimpleGame/include
   OBJECT_DIR = CMakeFiles\SimpleGame.dir
   OBJECT_FILE_DIR = CMakeFiles\SimpleGame.dir\src
   TARGET_SUPPORT_DIR = CMakeFiles\SimpleGame.dir
@@ -62,7 +62,7 @@ build CMakeFiles/SimpleGame.dir/src/Entity.cpp.obj: CXX_COMPILER__SimpleGame_uns
   CONFIG = Debug
   DEP_FILE = CMakeFiles\SimpleGame.dir\src\Entity.cpp.obj.d
   FLAGS = -g
-  INCLUDES = -IC:/deps/SDL2/include -ID:/uni/C_Project/SimpleGame/include
+  INCLUDES = -IC:/deps/SDL2/include -IC:/deps/SDL2_image/include -ID:/uni/C_Project/SimpleGame/include
   OBJECT_DIR = CMakeFiles\SimpleGame.dir
   OBJECT_FILE_DIR = CMakeFiles\SimpleGame.dir\src
   TARGET_SUPPORT_DIR = CMakeFiles\SimpleGame.dir
@@ -71,7 +71,7 @@ build CMakeFiles/SimpleGame.dir/src/main.cpp.obj: CXX_COMPILER__SimpleGame_unsca
   CONFIG = Debug
   DEP_FILE = CMakeFiles\SimpleGame.dir\src\main.cpp.obj.d
   FLAGS = -g
-  INCLUDES = -IC:/deps/SDL2/include -ID:/uni/C_Project/SimpleGame/include
+  INCLUDES = -IC:/deps/SDL2/include -IC:/deps/SDL2_image/include -ID:/uni/C_Project/SimpleGame/include
   OBJECT_DIR = CMakeFiles\SimpleGame.dir
   OBJECT_FILE_DIR = CMakeFiles\SimpleGame.dir\src
   TARGET_SUPPORT_DIR = CMakeFiles\SimpleGame.dir
@@ -87,10 +87,10 @@ build CMakeFiles/SimpleGame.dir/src/main.cpp.obj: CXX_COMPILER__SimpleGame_unsca
 build SimpleGame.exe: CXX_EXECUTABLE_LINKER__SimpleGame_Debug CMakeFiles/SimpleGame.dir/src/BackGround.cpp.obj CMakeFiles/SimpleGame.dir/src/Entity.cpp.obj CMakeFiles/SimpleGame.dir/src/main.cpp.obj
   CONFIG = Debug
   FLAGS = -g
-  LINK_LIBRARIES = -lSDL2main  -lSDL2  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  LINK_PATH = -LC:/deps/SDL2/lib/x64
+  LINK_LIBRARIES = -lSDL2main  -lSDL2  -lSDL2_image  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_PATH = -LC:/deps/SDL2/lib/x64   -LC:/deps/SDL2_image/lib/x64
   OBJECT_DIR = CMakeFiles\SimpleGame.dir
-  POST_BUILD = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\uni\C_Project\SimpleGame\build && C:\Users\sun\scoop\apps\cmake\current\bin\cmake.exe -E copy_if_different C:/deps/SDL2/lib/x64/SDL2.dll D:/uni/C_Project/SimpleGame/build"
+  POST_BUILD = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\uni\C_Project\SimpleGame\build && C:\Users\sun\scoop\apps\cmake\current\bin\cmake.exe -E copy_if_different C:/deps/SDL2/lib/x64/SDL2.dll D:/uni/C_Project/SimpleGame/build && cd /D D:\uni\C_Project\SimpleGame\build && C:\Users\sun\scoop\apps\cmake\current\bin\cmake.exe -E copy_if_different C:/deps/SDL2_image/lib/x64/SDL2_image.dll D:/uni/C_Project/SimpleGame/build"
   PRE_LINK = cd .
   TARGET_FILE = SimpleGame.exe
   TARGET_IMPLIB = libSimpleGame.dll.a

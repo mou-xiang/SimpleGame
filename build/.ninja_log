@@ -1,6 +1,11 @@
 # ninja log v7
-11	1032	7960344412588765	CMakeFiles/SimpleGame.dir/src/main.cpp.obj	f050fc2045e2dd98
-1034	1247	7960344422820743	SimpleGame.exe	1428f72847e97180
-10	420	7960344412578794	CMakeFiles/SimpleGame.dir/src/Entity.cpp.obj	8e55f9ddcb29320b
-9	409	7960344412558842	CMakeFiles/SimpleGame.dir/src/BackGround.cpp.obj	e369ce5d75e3422c
-3	21	7960344410870113	clean	a5e754acbab465fd
+5	401	7960458635571876	CMakeFiles/SimpleGame.dir/src/BackGround.cpp.obj	cc9da50958b59942
+7	408	7960458635591825	CMakeFiles/SimpleGame.dir/src/Entity.cpp.obj	42c6076ff7dc378
+10	977	7960698130751722	CMakeFiles/SimpleGame.dir/src/main.cpp.obj	5604a6dd75baa2dc
+977	1091	7960698140425525	SimpleGame.exe	e718cb2cda04affd
+35	677	7961433543415649	CMakeFiles/SimpleGame.dir/src/Entity.cpp.obj	42c6076ff7dc378
+54	1185	7961433543595189	CMakeFiles/SimpleGame.dir/src/main.cpp.obj	5604a6dd75baa2dc
+1185	1400	7961433554905667	SimpleGame.exe	e718cb2cda04affd
+9	400	7961436286358311	CMakeFiles/SimpleGame.dir/src/Entity.cpp.obj	42c6076ff7dc378
+11	1013	7961436286378270	CMakeFiles/SimpleGame.dir/src/main.cpp.obj	5604a6dd75baa2dc
+1013	1124	7961436296396461	SimpleGame.exe	e718cb2cda04affd
