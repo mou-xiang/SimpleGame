@@ -35,4 +35,7 @@ public:
 class Obstacle : public Entity {
 private:
   int8_t currentLine = 1;
+
+public:
+  Obstacle();
 };

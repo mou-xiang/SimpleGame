@@ -9,7 +9,7 @@ void Player::handleInput(SDL_Event& event){
   if (event.type == SDL_KEYDOWN) {
     if (event.key.keysym.sym == SDLK_LEFT && currentLine > 0) currentLine--;
     if (event.key.keysym.sym == SDLK_RIGHT && currentLine < 2)  currentLine++;
-    if (event.key.keysym.sym == SDLK_UP) {
+    if (event.key.keysym.sym == SDLK_UP && !isJump) {
       jumpV = JUMP_FORCE;
       isJump = true;
     }
