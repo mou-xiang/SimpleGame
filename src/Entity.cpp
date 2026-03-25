@@ -43,5 +43,6 @@ Player::Player(int setX, int setY, int setW, int setH, SDL_Texture* setTexture){
   w = setW;
   h = setH;
   texture = setTexture;
+  GROUND_Y = setY;
   SDL_Log("Player created");
 }

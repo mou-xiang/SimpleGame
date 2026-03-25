@@ -56,8 +56,8 @@ int main(int argc, char *argv[]) {
     Uint32 currentTick = SDL_GetTicks();
     DeltaTime = (currentTick - lastTick) / 1000.0f;
     lastTick = currentTick;
-    SDL_Log("DeltaTime = ");
-    std::cout << DeltaTime << '\n';
+    // SDL_Log("DeltaTime = ");
+    // std::cout << DeltaTime << '\n';
     //! 检测DeltaTime过大
     if (DeltaTime > 0.05f)
       DeltaTime = 0.05f;
@@ -75,8 +75,6 @@ int main(int argc, char *argv[]) {
     //! 清除上一帧画面
     SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
     SDL_RenderClear(renderer);
-    //! 渲染玩家
-    mainPlayer.render(renderer);
     //! 绘制地面
     SDL_SetRenderDrawColor(renderer, 0, 0, 255, 255);
     SDL_RenderDrawLine(renderer, windowCenterX, windowCenterY - 200, 0,
@@ -87,6 +85,8 @@ int main(int argc, char *argv[]) {
                        windowWidth / 3 * 2, windowHeight);
     SDL_RenderDrawLine(renderer, windowCenterX, windowCenterY - 200,
                        windowWidth, windowHeight);
+    //! 渲染玩家
+    mainPlayer.render(renderer);
 
     SDL_RenderPresent(renderer);
   }
