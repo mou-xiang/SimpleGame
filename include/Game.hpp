@@ -30,5 +30,8 @@ private:
   float DeltaTime;
   //! 游戏对象
   Player* mainPlayer;
+  std::vector<Entity*> gameEntities;  //? 存放障碍物或金币
+  float spawnTimer = 0.0f;
+  float spawnInterval = 1.5f;
 
 };
