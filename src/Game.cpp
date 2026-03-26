@@ -1,6 +1,7 @@
 #include "Game.hpp"
+#include "AssetManager.hpp"
 
-Game::Game()  : window(nullptr), renderer(nullptr), isRunning(false), DeltaTime(0)  {}
+Game::Game()  : window(nullptr), renderer(nullptr), assets(nullptr), isRunning(false), DeltaTime(0)  {}
 
 bool Game::init(const char* title, int width, int height) {
   m_windowHeight = height;
@@ -10,10 +11,12 @@ bool Game::init(const char* title, int width, int height) {
   //! 初始化窗口和渲染器
   window = SDL_CreateWindow(title, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, SDL_WINDOW_SHOWN);
   renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+  assets = new AssetManager(renderer);
 
   //! 初始化游戏角色
-  SDL_Texture* pTex = IMG_LoadTexture(renderer, "../assets/img.jpg");
-  mainPlayer = new Player(width / 3, height / 3 * 2, 100, 100, pTex);
+  // SDL_Texture* pTex = IMG_LoadTexture(renderer, "../assets/img.jpg");
+  assets->AddTexture("player", "../assets/img.jpg");
+  mainPlayer = new Player(width / 3, height / 3 * 2, 100, 100, assets->GetTexture("player"));
 
   lastTick = SDL_GetTicks();
   isRunning = true;

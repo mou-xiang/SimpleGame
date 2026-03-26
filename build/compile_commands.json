@@ -1,19 +1,25 @@
 [
 {
   "directory": "D:/uni/C_Project/SimpleGame/build",
-  "command": "D:\\llvm-mingw-ucrt-x86_64\\bin\\clang++.exe -IC:/deps/SDL2/include -IC:/deps/SDL2_image/include -ID:/uni/C_Project/SimpleGame/include -O3 -DNDEBUG -o CMakeFiles\\SimpleGame.dir\\src\\Entity.cpp.obj -c D:\\uni\\C_Project\\SimpleGame\\src\\Entity.cpp",
+  "command": "D:\\llvm-mingw-ucrt-x86_64\\bin\\clang++.exe -IC:/deps/SDL2/include -IC:/deps/SDL2_image/include -ID:/uni/C_Project/SimpleGame/include -g -o CMakeFiles\\SimpleGame.dir\\src\\AssetManager.cpp.obj -c D:\\uni\\C_Project\\SimpleGame\\src\\AssetManager.cpp",
+  "file": "D:/uni/C_Project/SimpleGame/src/AssetManager.cpp",
+  "output": "D:/uni/C_Project/SimpleGame/build/CMakeFiles/SimpleGame.dir/src/AssetManager.cpp.obj"
+},
+{
+  "directory": "D:/uni/C_Project/SimpleGame/build",
+  "command": "D:\\llvm-mingw-ucrt-x86_64\\bin\\clang++.exe -IC:/deps/SDL2/include -IC:/deps/SDL2_image/include -ID:/uni/C_Project/SimpleGame/include -g -o CMakeFiles\\SimpleGame.dir\\src\\Entity.cpp.obj -c D:\\uni\\C_Project\\SimpleGame\\src\\Entity.cpp",
   "file": "D:/uni/C_Project/SimpleGame/src/Entity.cpp",
   "output": "D:/uni/C_Project/SimpleGame/build/CMakeFiles/SimpleGame.dir/src/Entity.cpp.obj"
 },
 {
   "directory": "D:/uni/C_Project/SimpleGame/build",
-  "command": "D:\\llvm-mingw-ucrt-x86_64\\bin\\clang++.exe -IC:/deps/SDL2/include -IC:/deps/SDL2_image/include -ID:/uni/C_Project/SimpleGame/include -O3 -DNDEBUG -o CMakeFiles\\SimpleGame.dir\\src\\Game.cpp.obj -c D:\\uni\\C_Project\\SimpleGame\\src\\Game.cpp",
+  "command": "D:\\llvm-mingw-ucrt-x86_64\\bin\\clang++.exe -IC:/deps/SDL2/include -IC:/deps/SDL2_image/include -ID:/uni/C_Project/SimpleGame/include -g -o CMakeFiles\\SimpleGame.dir\\src\\Game.cpp.obj -c D:\\uni\\C_Project\\SimpleGame\\src\\Game.cpp",
   "file": "D:/uni/C_Project/SimpleGame/src/Game.cpp",
   "output": "D:/uni/C_Project/SimpleGame/build/CMakeFiles/SimpleGame.dir/src/Game.cpp.obj"
 },
 {
   "directory": "D:/uni/C_Project/SimpleGame/build",
-  "command": "D:\\llvm-mingw-ucrt-x86_64\\bin\\clang++.exe -IC:/deps/SDL2/include -IC:/deps/SDL2_image/include -ID:/uni/C_Project/SimpleGame/include -O3 -DNDEBUG -o CMakeFiles\\SimpleGame.dir\\src\\main.cpp.obj -c D:\\uni\\C_Project\\SimpleGame\\src\\main.cpp",
+  "command": "D:\\llvm-mingw-ucrt-x86_64\\bin\\clang++.exe -IC:/deps/SDL2/include -IC:/deps/SDL2_image/include -ID:/uni/C_Project/SimpleGame/include -g -o CMakeFiles\\SimpleGame.dir\\src\\main.cpp.obj -c D:\\uni\\C_Project\\SimpleGame\\src\\main.cpp",
   "file": "D:/uni/C_Project/SimpleGame/src/main.cpp",
   "output": "D:/uni/C_Project/SimpleGame/build/CMakeFiles/SimpleGame.dir/src/main.cpp.obj"
 }

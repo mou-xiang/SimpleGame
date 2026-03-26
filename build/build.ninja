@@ -12,7 +12,7 @@
 
 # =============================================================================
 # Project: SimpleGame
-# Configurations: Release
+# Configurations: Debug
 # =============================================================================
 
 #############################################
@@ -24,7 +24,7 @@ ninja_required_version = 1.5
 #############################################
 # Set configuration variable for custom commands.
 
-CONFIGURATION = Release
+CONFIGURATION = Debug
 # =============================================================================
 # Include auxiliary files.
 
@@ -49,28 +49,37 @@ cmake_ninja_workdir = D$:/uni/C_Project/SimpleGame/build/
 
 build cmake_object_order_depends_target_SimpleGame: phony || .
 
-build CMakeFiles/SimpleGame.dir/src/Entity.cpp.obj: CXX_COMPILER__SimpleGame_unscanned_Release D$:/uni/C_Project/SimpleGame/src/Entity.cpp || cmake_object_order_depends_target_SimpleGame
-  CONFIG = Release
+build CMakeFiles/SimpleGame.dir/src/AssetManager.cpp.obj: CXX_COMPILER__SimpleGame_unscanned_Debug D$:/uni/C_Project/SimpleGame/src/AssetManager.cpp || cmake_object_order_depends_target_SimpleGame
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\SimpleGame.dir\src\AssetManager.cpp.obj.d
+  FLAGS = -g
+  INCLUDES = -IC:/deps/SDL2/include -IC:/deps/SDL2_image/include -ID:/uni/C_Project/SimpleGame/include
+  OBJECT_DIR = CMakeFiles\SimpleGame.dir
+  OBJECT_FILE_DIR = CMakeFiles\SimpleGame.dir\src
+  TARGET_SUPPORT_DIR = CMakeFiles\SimpleGame.dir
+
+build CMakeFiles/SimpleGame.dir/src/Entity.cpp.obj: CXX_COMPILER__SimpleGame_unscanned_Debug D$:/uni/C_Project/SimpleGame/src/Entity.cpp || cmake_object_order_depends_target_SimpleGame
+  CONFIG = Debug
   DEP_FILE = CMakeFiles\SimpleGame.dir\src\Entity.cpp.obj.d
-  FLAGS = -O3 -DNDEBUG
+  FLAGS = -g
   INCLUDES = -IC:/deps/SDL2/include -IC:/deps/SDL2_image/include -ID:/uni/C_Project/SimpleGame/include
   OBJECT_DIR = CMakeFiles\SimpleGame.dir
   OBJECT_FILE_DIR = CMakeFiles\SimpleGame.dir\src
   TARGET_SUPPORT_DIR = CMakeFiles\SimpleGame.dir
 
-build CMakeFiles/SimpleGame.dir/src/Game.cpp.obj: CXX_COMPILER__SimpleGame_unscanned_Release D$:/uni/C_Project/SimpleGame/src/Game.cpp || cmake_object_order_depends_target_SimpleGame
-  CONFIG = Release
+build CMakeFiles/SimpleGame.dir/src/Game.cpp.obj: CXX_COMPILER__SimpleGame_unscanned_Debug D$:/uni/C_Project/SimpleGame/src/Game.cpp || cmake_object_order_depends_target_SimpleGame
+  CONFIG = Debug
   DEP_FILE = CMakeFiles\SimpleGame.dir\src\Game.cpp.obj.d
-  FLAGS = -O3 -DNDEBUG
+  FLAGS = -g
   INCLUDES = -IC:/deps/SDL2/include -IC:/deps/SDL2_image/include -ID:/uni/C_Project/SimpleGame/include
   OBJECT_DIR = CMakeFiles\SimpleGame.dir
   OBJECT_FILE_DIR = CMakeFiles\SimpleGame.dir\src
   TARGET_SUPPORT_DIR = CMakeFiles\SimpleGame.dir
 
-build CMakeFiles/SimpleGame.dir/src/main.cpp.obj: CXX_COMPILER__SimpleGame_unscanned_Release D$:/uni/C_Project/SimpleGame/src/main.cpp || cmake_object_order_depends_target_SimpleGame
-  CONFIG = Release
+build CMakeFiles/SimpleGame.dir/src/main.cpp.obj: CXX_COMPILER__SimpleGame_unscanned_Debug D$:/uni/C_Project/SimpleGame/src/main.cpp || cmake_object_order_depends_target_SimpleGame
+  CONFIG = Debug
   DEP_FILE = CMakeFiles\SimpleGame.dir\src\main.cpp.obj.d
-  FLAGS = -O3 -DNDEBUG
+  FLAGS = -g
   INCLUDES = -IC:/deps/SDL2/include -IC:/deps/SDL2_image/include -ID:/uni/C_Project/SimpleGame/include
   OBJECT_DIR = CMakeFiles\SimpleGame.dir
   OBJECT_FILE_DIR = CMakeFiles\SimpleGame.dir\src
@@ -84,9 +93,9 @@ build CMakeFiles/SimpleGame.dir/src/main.cpp.obj: CXX_COMPILER__SimpleGame_unsca
 #############################################
 # Link the executable SimpleGame.exe
 
-build SimpleGame.exe: CXX_EXECUTABLE_LINKER__SimpleGame_Release CMakeFiles/SimpleGame.dir/src/Entity.cpp.obj CMakeFiles/SimpleGame.dir/src/Game.cpp.obj CMakeFiles/SimpleGame.dir/src/main.cpp.obj
-  CONFIG = Release
-  FLAGS = -O3 -DNDEBUG
+build SimpleGame.exe: CXX_EXECUTABLE_LINKER__SimpleGame_Debug CMakeFiles/SimpleGame.dir/src/AssetManager.cpp.obj CMakeFiles/SimpleGame.dir/src/Entity.cpp.obj CMakeFiles/SimpleGame.dir/src/Game.cpp.obj CMakeFiles/SimpleGame.dir/src/main.cpp.obj
+  CONFIG = Debug
+  FLAGS = -g
   LINK_LIBRARIES = -lSDL2main  -lSDL2  -lSDL2_image  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   LINK_PATH = -LC:/deps/SDL2/lib/x64   -LC:/deps/SDL2_image/lib/x64
   OBJECT_DIR = CMakeFiles\SimpleGame.dir

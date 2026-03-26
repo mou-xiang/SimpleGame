@@ -1,4 +1,5 @@
 #include "Entity.hpp"
+// #include "Utils.hpp"
 
 void Entity::render(SDL_Renderer* renderer){
   SDL_Rect rect = { (int)x - w/2, (int)y - h/2, w, h };

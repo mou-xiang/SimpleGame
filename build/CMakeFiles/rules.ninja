@@ -7,14 +7,14 @@
 
 # =============================================================================
 # Project: SimpleGame
-# Configurations: Release
+# Configurations: Debug
 # =============================================================================
 # =============================================================================
 
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__SimpleGame_unscanned_Release
+rule CXX_COMPILER__SimpleGame_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}D:\llvm-mingw-ucrt-x86_64\bin\clang++.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -24,7 +24,7 @@ rule CXX_COMPILER__SimpleGame_unscanned_Release
 #############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__SimpleGame_Release
+rule CXX_EXECUTABLE_LINKER__SimpleGame_Debug
   command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && D:\llvm-mingw-ucrt-x86_64\bin\clang++.exe $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking CXX executable $TARGET_FILE; 正在将 SDL2.dll 复制到输出目录...; 正在将 SDL2_image.dll 复制到输出目录...
   restat = $RESTAT

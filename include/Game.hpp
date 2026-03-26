@@ -3,6 +3,7 @@
 #include <SDL.h>
 #include <SDL_image.h>
 #include "Entity.hpp"
+#include "AssetManager.hpp"
 
 class Game {
 public:
@@ -23,6 +24,7 @@ private:
   bool isRunning;
   SDL_Window* window;
   SDL_Renderer* renderer;
+  AssetManager* assets;
   //! 时间控制
   Uint32 lastTick;
   float DeltaTime;
